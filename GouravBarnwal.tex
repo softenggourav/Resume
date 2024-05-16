@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Author: Gourav Barnwal
+% Based off of: https://github.com/jakeryang/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+    \uline{\phantom{#1}}%
+    \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{5pt}
+
+\titleformat{\section}{
+    \vspace{2pt} \scshape \raggedright\large % header section
+}{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% sans serif sections
+\titleformat{\section}{
+    \bfseries \vspace{-7pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-5pt}]
+
+% TODO EBSERIES
+% default leftmargin 0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStartForSkills}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEndForSkills}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\color{text-grey}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+    \item\small{
+            {#1 \vspace{-1pt}}
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+    {#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheadingForSkills}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%----------HEADING----------
+\begin{center}
+\textbf{\Huge Gourav Barnwal} \\ \vspace{5pt}
+\small \faPhone* \texttt{+91-8250700654} \hspace{1pt} $|$
+\hspace{1pt} \faEnvelope \hspace{2pt} \texttt{softenggourav@gmail.com} \hspace{1pt} $|$
+\hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/softenggourav/}{in/softenggourav/} $|$
+\hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/softenggourav}{softenggourav/} $|$
+\hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{India}
+\\ \vspace{-3pt}
+\end{center}
+%-----------SUMMARY-----------
+\section{SUMMARY}
+\resumeSubHeadingListStart
+\resumeItem{Senior Software engineer with around 4 years of experience specializing in developing customer-focused, scalable code.}
+\resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Trinet-Zenefits India - A Digital HR platform for Enterprises}{Dec. 2021 -- Ongoing}
+{Senior Software Engineer}{Remote}
+\resumeItemListStart
+\resumeItem{Played a key role in onboarding and mentoring new team members, guiding them through technical workflows and offering ongoing support.}
+\resumeItem{Initiated the implementation of automation process in the fulfillment flow. This enhancement resulted in a remarkable decrease in operation team involvement, reducing involvement from 10k per year to single-digit cases per customer.}
+\resumeItem{Led collaboration efforts with external Insurance provider, Principal and Guardian. Develop and implement a backend intensive fulfilment lifecycle, utilizing several REST APIs for all the coverage related data flow.}
+\resumeItem{Effectively led the migration of a back-end monolith service from Python 2 to Python 3, ensuring a seamless transition and ongoing integration, leading to improved system maintainability.}
+\resumeItem{Managed multiple fulfilment channels like EDI, APIs, Manual form processes for various Insurance provider.}
+\resumeItem{Developed and automated reconciliation flow to streamline the efficient sharing and updating of data between brokers and carriers, particularly when employees undergo changes in their insurance plans.}
+\resumeItemListEnd
+\resumeSubheading
+{MoneyTap - A Credit-led Neobank}{Jun. 2020 -- Nov. 2021}
+{Software Engineer}{Bangalore, India}
+\resumeItemListStart
+\resumeItem{Developed a microservice to automate the data collection process in collaboration with an external agency (Karza) for high-value loan customers (loans exceeding INR 5 lakhs), leading to a substantial boost in revenue and customer acquisition.}
+\resumeItem{Implemented a comprehensive module to automate the loan collection and legal processes through an external agency (Credgenics), facilitating the recovery of loans from thousands of customers and achieving a monthly loan collection of approximately INR 15 million.}
+\resumeItem{Designed and implemented APIs and back-end services enabling customers to trigger loan restructuring options in compliance with RBI guidelines. This initiative resulted in increased revenue and a noteworthy 10\% enhancement in customer lifetime value.}
+\resumeItem{Effectively managed and integrated various APIs from lending partner Incred, contributing to reduced loan processing times and enhanced operational efficiency.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+%-----------INTERNSHIP-----------
+\section{INTERNSHIP}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Shunya - A Learning Management Tool for Schools}{Apr. 2020 -- Jun. 2020}
+{Software Engineering Intern}{Bangalore, India}
+\resumeItemListStart
+\resumeItem{Developed the company website using no-code tool, Webflow. Integrated open-source software Jitsi for video calling. Designed, developed and deployed a Java-based back-end database service via AWS EC2.}
+\resumeItemListEnd
+\resumeSubheading
+{TechMahindra - MakersLab, Research Division}{May 2019 -- Jul. 2019}
+{Student Scientist Intern}{Pune, India}
+\resumeItemListStart
+\resumeItem{Worked on a research project focused on detecting adverse events in live stream videos. Used YOLO and Faster-RCNN deep learning models to improve the detection efficiency. Annotated 20k manually collected images using the Open-Source tool LabelImg.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+%-----------SKILLS-----------
+\section{SKILLS}
+\resumeSubHeadingListStartForSkills
+\resumeSubSubheadingForSkills
+{\textbf{Language and Tools}: Java(Spring-Boot), Python (Django), SQL, GraphQL, REST-API, Elasticsearch, Kafka}{}{}{}{}
+\resumeSubSubheadingForSkills
+{\textbf{System Design}: OOPS, LLD, HLD, Design Pattern, Microservice, Unit and Integration Testing}{}{}{}{}
+\resumeSubHeadingListEndForSkills
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Indian Institute of Technology, Bhubaneswar}{Aug. 2016 -- May 2020}
+{\textbf{B.Tech}, Relevant Courses: Data Structures and Algorithms, DBMS, Deep Learning}{Bhubaneswar}
+\resumeSubHeadingListEnd
+
+\end{document}
